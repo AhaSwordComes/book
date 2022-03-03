@@ -14,7 +14,11 @@
 
 ### explain
 
+执行计划怎么看？
 
+key rows extra filter ref
+
+explain analyze 看执行过程和预计耗时 [mysqlblog](https://dev.mysql.com/blog-archive/mysql-explain-analyze/#:~:text=EXPLAIN%20ANALYZE%20is%20a%20profiling,points%20in%20the%20execution%20plan.)
 
 ### 缓存
 
@@ -27,6 +31,8 @@
 索引有几种，原理（为什么能加速），各自特点，各自场景
 
 不同引擎的索引有区别吗
+
+最左前缀：index (column1,column2,column3), where column1 = cxx，column2=xxx,可用到索引，column2=xx,column1=xxx 用不到索引
 
 ### join表时使用字段类型应该一致，并建索引
 
@@ -59,6 +65,8 @@ mysql 自带的分析优化，但5.7 decrepted,8.0 removed
 你知道吗？在 Oracle 里，NULL 和 Empty 的字符串是一样的
 
 null亦占用空间（细说？）
+
+
 
 ### prepared statements
 
@@ -155,3 +163,6 @@ kill 'processId';
 delimiter;
 ```
 
+## 疑问
+
+视图是啥？
